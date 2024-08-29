@@ -33,8 +33,8 @@ public abstract class Funcionario implements SalarioFinal{
                 "\nCpf = " + cpf +
                 "\nRG = " + rg +
                 "\nData de nascimento = " + data_nascimento +
-                "\nSexo = " + sexo +
-                "\nSetor = " + setor +
+                "\nSexo = " + sexo.getTexto() +
+                "\nSetor = " + setor.getNome() +
                 "\nSalario = " + salario +
                 "\nSalario Final = " + getSalarioFinal() +
                 "\nEndereco = " + endereco;

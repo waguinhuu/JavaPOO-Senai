@@ -5,7 +5,11 @@ public class Principal {
         Gerente gerente = new Gerente("Wagner","123.456.789-00","34543",
                 new Endereco("Drena","93","nn sei","43900-000","SFC",UnidadeFederativa.BAHIA),Setor.MARKETING,Sexo.MASCULINO,3000,"05/06/2005",Bonificacao.GERENTE);
 
-        System.out.println(gerente);
+        Diretor diretor = new Diretor("Wagner","123.456.789-00","34543",
+                new Endereco("Drena","93","nn sei","43900-000","SFC",UnidadeFederativa.BAHIA),Setor.MARKETING,Sexo.MASCULINO,3000,"05/06/2005",Bonificacao.GERENTE);
+//        System.out.println(gerente);
+        System.out.println(diretor);
+
     }
 
 
