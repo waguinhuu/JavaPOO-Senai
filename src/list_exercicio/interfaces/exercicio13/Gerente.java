@@ -10,13 +10,13 @@ public class Gerente extends CargoDeConfianca{
     public double getSalarioFinal() {
         double salarioFinal = super.salario * super.bonificacao.GERENTE.getValor();
         salarioFinal += super.salario;
-        //salarioFinal += super.salario * bonificacao.GERENTE.getValor();
+
         return salarioFinal;
     }
 
     @Override
     public String toString() {
-        return "Gerente{" +
+        return "\nGerente: " +
                 super.toString() +
                 "\nbonificacao = " + bonificacao.getValor() + "% ";
     }

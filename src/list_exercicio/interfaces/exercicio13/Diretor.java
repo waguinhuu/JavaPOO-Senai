@@ -1,13 +1,12 @@
 package list_exercicio.interfaces.exercicio13;
 
-public class Diretor extends Funcionario implements Contratacao{
+public class Diretor extends CargoDeConfianca implements Contratacao{
 
     private final double PREMIO = 0.5;
-    private Bonificacao bonificacao;
+
 
     public Diretor(String nome, String cpf, String rg, Endereco endereco, Setor setor, Sexo sexo, double salario, String data_nascimento, Bonificacao bonificacao) {
-        super(nome, cpf, rg, endereco, setor, sexo, salario, data_nascimento);
-        this.bonificacao = bonificacao;
+        super(nome, cpf, rg, endereco, setor, sexo, salario, data_nascimento, bonificacao);
     }
 
     @Override
@@ -27,10 +26,15 @@ public class Diretor extends Funcionario implements Contratacao{
     @Override
     public double getSalarioFinal() {
         double salarioFinal = 0;
-         salarioFinal = (super.salario * bonificacao.DIRETOR.getValor()) + (super.salario * PREMIO);
+         salarioFinal = (super.salario * super.bonificacao.DIRETOR.getValor()) + (super.salario * PREMIO);
         salarioFinal += super.salario;
         return salarioFinal;
     }
 
-
+    @Override
+    public String toString() {
+        return "\nDiretor: " +
+                super.toString() +
+                "\nPREMIO=" + PREMIO;
+    }
 }
