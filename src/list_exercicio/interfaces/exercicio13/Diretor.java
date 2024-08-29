@@ -26,7 +26,8 @@ public class Diretor extends Funcionario implements Contratacao{
 
     @Override
     public double getSalarioFinal() {
-        double salarioFinal = super.salario * (bonificacao.DIRETOR.getValor() + PREMIO);
+        double salarioFinal = 0;
+         salarioFinal = (super.salario * bonificacao.DIRETOR.getValor()) + (super.salario * PREMIO);
         salarioFinal += super.salario;
         return salarioFinal;
     }
